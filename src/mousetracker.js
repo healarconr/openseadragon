@@ -2690,8 +2690,8 @@
             }
         }
 
-        // Only capture and track primary button, pen, and touch contacts
-        if ( buttonChanged !== 0 ) {
+        // Only capture and track primary button, aux button, pen, and touch contacts
+        if ( buttonChanged !== 0 && buttonChanged !== 1 ) {
             // Aux Press
             if ( tracker.nonPrimaryPressHandler ) {
                 propagate = tracker.nonPrimaryPressHandler(
@@ -2858,8 +2858,8 @@
             }
         }
 
-        // Only capture and track primary button, pen, and touch contacts
-        if ( buttonChanged !== 0 ) {
+        // Only capture and track primary button, aux button, pen, and touch contacts
+        if ( buttonChanged !== 0 && buttonChanged !== 1 ) {
             // Aux Release
             if ( tracker.nonPrimaryReleaseHandler ) {
                 propagate = tracker.nonPrimaryReleaseHandler(

@@ -1551,6 +1551,13 @@ function drawTiles( tiledImage, lastDrawn ) {
             tiledImage._drawer._restoreRotationChanges(false);
         }
     }
+
+    if (tiledImage.viewer) {
+        tiledImage.viewer.raiseEvent('tiled-image-drawn', {
+            tiledImage: tiledImage
+        });
+    }
+
     drawDebugInfo( tiledImage, lastDrawn );
 }
 
